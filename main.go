@@ -1,8 +1,9 @@
 package main
 
 import (
-	plugin "./plugins"
 	"fmt"
+	"gitub.com/stryda/prompt/pkg/directory"
+	"gitub.com/stryda/prompt/pkg/git"
 	"log"
 	"os"
 	"strings"
@@ -20,8 +21,8 @@ func main() {
 	currentDir := getDir()
 
 	slugs := []string{
-		plugin.PrintDirectory(currentDir),
-		plugin.PrintGit(currentDir),
+		directory.Print(currentDir),
+		git.Print(currentDir),
 	}
 
 	output := strings.Join(slugs, " ")

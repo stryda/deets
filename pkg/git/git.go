@@ -1,4 +1,4 @@
-package plugins
+package git
 
 import (
 	"fmt"
@@ -21,7 +21,7 @@ func getBranch(path string) string {
 	return ref.Name().Short()
 }
 
-func PrintGit(path string) string {
+func Print(path string) string {
 	branch := getBranch(path)
 	if len(branch) > 0 {
 		return fmt.Sprintf("%s %s", sigill, branch)
