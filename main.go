@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gitub.com/stryda/prompt/pkg/directory"
-	"gitub.com/stryda/prompt/pkg/git"
+	"gitub.com/stryda/prompt/internal/directory"
+	"gitub.com/stryda/prompt/internal/git"
 	"log"
 	"os"
 	"strings"
