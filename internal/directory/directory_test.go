@@ -15,6 +15,6 @@ func (suite *DirectoryTestSuite) TestPrint() {
 	assert.Equal(suite.T(), "file.test", base)
 }
 
-func TestExampleTestSuite(t *testing.T) {
+func TestDirectoryTestSuite(t *testing.T) {
 	suite.Run(t, new(DirectoryTestSuite))
 }

@@ -15,6 +15,6 @@ func (suite *GitTestSuite) TestPrint() {
 	assert.Equal(suite.T(), "", path)
 }
 
-func TestExampleTestSuite(t *testing.T) {
+func TestGitTestSuite(t *testing.T) {
 	suite.Run(t, new(GitTestSuite))
 }
