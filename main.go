@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"gitub.com/stryda/prompt/internal/directory"
 	"gitub.com/stryda/prompt/internal/git"
-	"gitub.com/stryda/prompt/internal/shell"
 	"log"
 	"os"
 	"strings"
@@ -27,9 +26,6 @@ func main() {
 	}
 
 	output := strings.Join(slugs, " ")
-
-	shell.Print()
-
 
 	fmt.Println(output)
 }
