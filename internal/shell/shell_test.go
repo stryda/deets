@@ -11,8 +11,23 @@ type ShellTestSuite struct {
 }
 
 func (suite *ShellTestSuite) TestGetShell() {
-	shell := getShell()
-	assert.Equal(suite.T(), "aaaa", shell)
+	s := Print()
+	assert.Equal(suite.T(), "", s)
+}
+
+func (suite *ShellTestSuite) TestEnvironment() {
+	printEnv()
+	assert.True(suite.T(), len(getEnv()) > 0)
+}
+
+func (suite *ShellTestSuite) TestGetCommand() {
+	c := getCommand("whoami", []string{}, true)
+	assert.NotEmpty(suite.T(), c)
+}
+
+func (suite *ShellTestSuite) TestEnvironmentVariable() {
+	v := getEnvVariable("SHELL")
+	assert.Equal(suite.T(), "/bin/bash", v)
 }
 
 func TestGitTestSuite(t *testing.T) {
